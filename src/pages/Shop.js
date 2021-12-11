@@ -7,7 +7,7 @@ class Shop extends React.Component {
         return (
             <div className="Shop">
                 <Navbar/>
-                <h1>Shop</h1>
+                <h1>Shop Here</h1>
             </div>
         );
     }

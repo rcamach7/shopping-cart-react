@@ -11,7 +11,9 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background: url("../images/background.png") no-repeat;
+    background: url("../images/a.jpeg");
+    /*background: url("../images/background.png");*/
+    border-bottom: solid black 4px;
 }
 
 /*Navbar Title/Logo Properties*/
@@ -34,24 +36,24 @@ body {
 }
 
 .navbar-links li {
-    color: yellow;
+    color: black;
     font-size: 25px;
     font-weight: bolder;
 
     padding: 20px 30px 20px 30px;
     margin-right: 10px;
 
-    border-bottom: solid yellow 5px;
+    border-bottom: solid #492e69 5px;
 }
 
 .navbar-links li:hover {
-    color: royalblue;
-    background-color: yellow;
+    background-color: #572665;
+    color: white;
     border-radius: 10%;
 
-    transform: scale(1.2);
+    transform: scale(1.1);
 
-    border: solid yellow 1px;
+    border: solid #caaa9d 1px;
 }
 
 a:hover, a:visited, a:link, a:active {
