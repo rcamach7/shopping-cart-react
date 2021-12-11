@@ -3,6 +3,7 @@ body {
     margin: 0 auto;
 }
 
+/*Navbar Container*/
 .navbar {
     height: 100px;
 
@@ -10,21 +11,22 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background-color: #000000;
-    color: white;
+    background: url("../images/background.png") no-repeat;
 }
 
-.logoContainer {
-    display: flex;
-    align-items: center;
-    margin-left: 0;
+/*Navbar Title/Logo Properties*/
+.titleImage {
+    width: 200px;
+    height: 100px;
+
+    margin-left: 2.5%;
 }
 
+/*Navbar Links Properties*/
 .navbar-links {
     display: flex;
     align-items: center;
 
-    color: white;
     list-style: none;
 
     font-size: 20px;
@@ -32,17 +34,26 @@ body {
 }
 
 .navbar-links li {
-    color: white;
+    color: yellow;
+    font-size: 25px;
+    font-weight: bolder;
+
     padding: 20px 30px 20px 30px;
     margin-right: 10px;
+
+    border-bottom: solid yellow 5px;
 }
 
 .navbar-links li:hover {
-    background-color: #32322d;
+    color: royalblue;
+    background-color: yellow;
+    border-radius: 10%;
+
     transform: scale(1.2);
+
+    border: solid yellow 1px;
 }
 
-.logoContainer img {
-    width: 100px;
-    height: 100px;
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
 }

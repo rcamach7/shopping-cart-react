@@ -1,15 +1,12 @@
 import React from "react";
-import "../styles/pages.css"
+import "../styles/pages.css";
+import Navbar from "../components/Navbar";
 
 class Home extends React.Component {
     render() {
         return (
             <div className="homepage">
-                <div className="homepageImage">
-                    <h1>The Finest Collection Of Supercars</h1>
-                </div>
-                <div className="checkoutCollection">
-                </div>
+                <Navbar/>
             </div>
         );
     }
