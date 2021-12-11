@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+    background-color: black;
+}
+
+.homepageImage {
+    width: 100%;
+    height: 700px;
+
+    background: url("../images/homepage.png") no-repeat;
+    background-size: contain;
+
+    color: white;
+    text-align: center;
+}
+
+.checkoutCollection {
+    color: white;
+}
