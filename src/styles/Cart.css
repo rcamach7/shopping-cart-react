@@ -1,0 +1,15 @@
+.checkoutContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.checkoutBox {
+    height: 500px;
+    width: 500px;
+
+    margin-top: 30px;
+
+    text-align: center;
+    border: red solid 2px;
+}

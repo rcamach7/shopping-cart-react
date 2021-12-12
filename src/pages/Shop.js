@@ -14,12 +14,24 @@ class Shop extends React.Component {
                 "lugia",
                 "kyogre",
                 "raikou",
-                "lucrio",
                 "umbreon",
                 "rayquaza",
                 "gengar"
             ],
             pokemons: [],
+            prices: [
+                499999,
+                699999,
+                1000000,
+                1500000,
+                1000000,
+                1000000,
+                1000000,
+                1000000,
+                1000000,
+                199
+            ],
+            cart: Array(10).fill(0),
         }
     }
 
@@ -31,22 +43,35 @@ class Shop extends React.Component {
                 .then(res => res.json())
                 .then(
                     (result) => {
-                        this.generatePokemon(result);
+                        this.generatePokemon(result, i);
                     }
                 )
         }
     }
 
-    generatePokemon(pokemon) {
+    generatePokemon(pokemon, priceIndex) {
         const attacks = this.generateMoves(pokemon.moves.length, pokemon.moves);
         const newPokemon = <Pokemon imageSource={pokemon.sprites.other['official-artwork'].front_default}
                                     name={pokemon.name} key={pokemon.id}
-                                    attacks={attacks}/>
+                                    attacks={attacks}
+                                    price={this.state.prices[priceIndex]}
+                                    onClick={() => this.handleAddToCart(pokemon.name)}/>
         let newCollection = this.state.pokemons;
         newCollection.push(newPokemon);
         this.setState({
             pokemons: newCollection,
         });
+    }
+
+    handleAddToCart(name) {
+        let indexForCart = this.state.pokemonInventory.indexOf(name);
+        let totalCart = this.state.cart[indexForCart] + 1;
+
+        let newCartValues = this.state.cart;
+        newCartValues[indexForCart] = totalCart;
+        this.setState({
+            cart: newCartValues,
+        })
     }
 
     generateMoves(numMoves, moves) {
@@ -62,7 +87,7 @@ class Shop extends React.Component {
         return (
             <div className="Shop">
                 <Navbar/>
-                <div className="mainContainer">
+                <div className="mainContainerShop">
                     {this.state.pokemons}
                 </div>
             </div>
@@ -75,18 +100,20 @@ function Pokemon(props) {
         <div className="pokemon">
             <p>{props.name.toUpperCase()}</p>
             <img src={props.imageSource} alt="pokemon"/>
-            <p>$499,999</p>
+            <p className="price">${props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
             {/*TODO: Fix move retrieval - is crashing app*/}
             <div className="attacks">
                 <label htmlFor="cars">View All Moves:</label>
                 <select>
-                    {props.attacks.map( (move, index) => {
+                    {props.attacks.map((move, index) => {
                         return (
                             <option key={index}>{move}</option>
                         );
                     })}
                 </select>
-                <div className="addToCart">Add To Cart</div>
+                <div>
+                    <button onClick={props.onClick} className="addToCart">Add To Cart</button>
+                </div>
             </div>
 
         </div>

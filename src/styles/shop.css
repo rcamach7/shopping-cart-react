@@ -1,4 +1,4 @@
-.mainContainer {
+ .mainContainerShop {
     width: 100%;
     height: 100%;
     margin: 25px auto 0;
@@ -27,14 +27,18 @@
 
 /*Add To Cart*/
 .addToCart {
-    margin: 10px 10px 0 10px;
-    border-radius: 5%;
+    margin: 15px 10px 0 10px;
 
     color: white;
     background-color: #492e69;
+    padding: 10px;
 }
 
 .addToCart:hover {
     background-color: #492e69;
     transform: scale(1.1);
+}
+
+.price {
+    font-weight: bolder;
 }

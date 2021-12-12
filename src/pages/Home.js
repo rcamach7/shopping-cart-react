@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/pages.css";
+import "../styles/home.css";
 import Navbar from "../components/Navbar";
 import Showcase from "../images/showcase.png";
 import {Link} from "react-router-dom";

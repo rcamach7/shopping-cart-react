@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/components.css";
+import "../styles/navbar.css";
 import title from "../images/title.png";
 import {Link} from "react-router-dom";
 
@@ -10,11 +10,14 @@ class Navbar extends React.Component {
                 <img className="titleImage" src={title} alt="tito"/>
 
                 <ul className="navbar-links">
-                    <Link to="/shop">
-                        <li className="ll">Shop</li>
-                    </Link>
                     <Link to="/">
                         <li>Home</li>
+                    </Link>
+                    <Link to="/shop">
+                        <li>Shop</li>
+                    </Link>
+                    <Link to="/cart">
+                        <li>Cart</li>
                     </Link>
                 </ul>
             </nav>
