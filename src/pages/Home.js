@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/home.css";
-import Navbar from "../components/Navbar";
 import Showcase from "../images/showcase.png";
 import {Link} from "react-router-dom";
 
@@ -8,7 +7,6 @@ class Home extends React.Component {
     render() {
         return (
             <div className="homepage">
-                <Navbar/>
                 <div className="mainContainer">
                     <MainSeller/>
                 </div>
