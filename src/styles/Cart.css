@@ -5,11 +5,32 @@
 }
 
 .checkoutBox {
-    height: 500px;
     width: 500px;
-
     margin-top: 30px;
 
     text-align: center;
-    border: red solid 2px;
 }
+
+.checkoutBox h1, h2 {
+    background-color: #492e69;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.checkoutBox button {
+    padding: 10px 200px 10px 200px;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: #f4dd00;
+}
+
+.toPurchaseContainer {
+    text-align: left;
+}
+
+.toPurchaseContainer li {
+    font-weight: bolder;
+    padding: 5px;
+
+}
+

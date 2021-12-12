@@ -1,37 +1,14 @@
 import React from "react";
 import "../styles/shop.css";
-import Navbar from "../components/Navbar";
 
 class Shop extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pokemonInventory: [
-                "pikachu",
-                "charizard",
-                "zapdos",
-                "mewtwo",
-                "lugia",
-                "kyogre",
-                "raikou",
-                "umbreon",
-                "rayquaza",
-                "gengar"
-            ],
+            pokemonInventory: props.inventory,
             pokemons: [],
-            prices: [
-                499999,
-                699999,
-                1000000,
-                1500000,
-                1000000,
-                1000000,
-                1000000,
-                1000000,
-                1000000,
-                199
-            ],
-            cart: Array(10).fill(0),
+            prices: props.prices,
+            cart: props.cart,
         }
     }
 
@@ -55,7 +32,7 @@ class Shop extends React.Component {
                                     name={pokemon.name} key={pokemon.id}
                                     attacks={attacks}
                                     price={this.state.prices[priceIndex]}
-                                    onClick={() => this.handleAddToCart(pokemon.name)}/>
+                                    onClick={() => this.props.handleAddToCart(pokemon.name)}/>
         let newCollection = this.state.pokemons;
         newCollection.push(newPokemon);
         this.setState({
@@ -64,14 +41,8 @@ class Shop extends React.Component {
     }
 
     handleAddToCart(name) {
-        let indexForCart = this.state.pokemonInventory.indexOf(name);
-        let totalCart = this.state.cart[indexForCart] + 1;
-
-        let newCartValues = this.state.cart;
-        newCartValues[indexForCart] = totalCart;
-        this.setState({
-            cart: newCartValues,
-        })
+        console.log(name + " first hit")
+        this.props.handleAddToCart(name);
     }
 
     generateMoves(numMoves, moves) {
@@ -86,7 +57,6 @@ class Shop extends React.Component {
     render() {
         return (
             <div className="Shop">
-                <Navbar/>
                 <div className="mainContainerShop">
                     {this.state.pokemons}
                 </div>

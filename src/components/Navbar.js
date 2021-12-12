@@ -4,6 +4,9 @@ import title from "../images/title.png";
 import {Link} from "react-router-dom";
 
 class Navbar extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <nav className="navbar">
@@ -17,7 +20,7 @@ class Navbar extends React.Component {
                         <li>Shop</li>
                     </Link>
                     <Link to="/cart">
-                        <li>Cart</li>
+                        <li>Cart ({this.props.totalItems})</li>
                     </Link>
                 </ul>
             </nav>
