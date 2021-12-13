@@ -91,7 +91,7 @@ function RouteSwitch() {
         <BrowserRouter>
             <Navbar totalItems={totalItems}/>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/shopping-cart-react" element={<Home/>}/>
                 <Route path="/shop" element={<Shop pokemonInventory={pokemonInventory}
                                                    prices={prices}
                                                    cart={cart}
