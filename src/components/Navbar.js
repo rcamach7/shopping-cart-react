@@ -10,7 +10,7 @@ class Navbar extends React.Component {
                 <img className="titleImage" src={title} alt="tito"/>
 
                 <ul className="navbar-links">
-                    <Link to="/">
+                    <Link to="/shopping-cart-react">
                         <li>Home</li>
                     </Link>
                     <Link to="/shop">
