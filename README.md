@@ -1,6 +1,10 @@
 # E-Commerce React Site 
 Clean design of an e-commerce page with shopping-cart capabilities.
 
+### How To Play
+
+[GitHub Pages](https://rcamach7.github.io/shopping-cart-react/).
+
 #### Local Installation & Running
 ```bash
 git clone https://github.com/rcamach7/shopping-cart-react.git
